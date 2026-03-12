@@ -272,10 +272,8 @@ span{
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 1.5rem;
-
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
 }
 
 .project-container .project-box {
@@ -288,13 +286,15 @@ span{
 
 
 .project-box{
-    width: 25rem;
-    height: 15rem;
+    width: 100%;
+    height: 24rem;
 }
 
 .project-box img {
-    width: 25rem;
-    height: 15rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     transition: .5s ease;
 }
 
@@ -308,12 +308,12 @@ span{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0, .1), var(--bbgg-color));
+    background: linear-gradient(rgba(0,0,0, .8), rgba(0,123,255, .3));
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 4rem;
+    padding: 2rem;
     transform: translateY(100%);
     transition: .5s ease;
 
@@ -325,11 +325,11 @@ span{
 
 
 .project-layer h4 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
 }
 
 .project-layer p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin: .2rem 0 1rem;
 }
 
@@ -604,19 +604,21 @@ span{
         height: 100%;
     }
     
-    .project-box img {
-        width: 100%;
-        height: 100%;
-        transition: .5s ease;
-    }
+    /* Responsive img height now handled in main rule */
 
     .projects h2 {
         margin-bottom: 3rem;
     }
 
     .project-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
+
+    .project-box{
+        height: 22rem;
+    }
+    
+    /* Fixed height removed; now responsive with main rule */
 
     .certificates h2 {
         margin-bottom: 5rem;
@@ -649,11 +651,7 @@ span{
         height: 100%;
     }
     
-    .project-box img {
-        width: 100%;
-        height: 100%;
-        transition: .5s ease;
-    }
+    /* Responsive img height handled in main rule */
 
     .footer-iconTop{
         font-size: 1.4rem;
@@ -680,11 +678,7 @@ span{
         height: 100%;
     }
     
-    .project-box img {
-        width: 100%;
-        height: 100%;
-        transition: .5s ease;
-    }
+    /* Responsive img height handled in main rule */
 
     .footer-iconTop{
         font-size: 1.4rem;
